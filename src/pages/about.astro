@@ -1,0 +1,59 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title="About | Jayden Harrod"
+      description="About Jayden Harrod Lorem Ipsum"
+    />
+    <style>
+      .heroImg {
+        max-height: 24rem;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .heroImg img {
+        width: 100%;
+      }
+
+      .bio {
+        font-size: var(--f-u1);
+        line-height: 2;
+        margin-top: 4em;
+      }
+
+      .wrapper.bio {
+        max-width: 50em;
+      }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper">
+      <h1>About J5</h1>
+      <div class="heroImg">
+        <img
+          width="1400"
+          height="350"
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&h=300&q=75"
+        />
+      </div>
+      <div class="bio wrapper">
+        <p>Hi, I'm Jayden 👋</p>
+        <p>A self-taught web developer from Australia that enjoys creating digital products.</p>
+        <p>
+          In high school, I monetised my own YouTube brand and recieved sponsorships with Lenovo. I picked up skills in video production, infrastructure, and digital marketing prior to leaving high school. From there, I worked as a videographer and content creator in Sydney.
+        </p>
+        <p>
+          I took a pivot to web development in 2016 and have been working in the industry ever since. I've worked on a variety of projects from small websites to large scale enterprise applications. I've worked with a variety of technologies and frameworks, but I've found myself gravitating towards React and Node.js.
+        </p>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
