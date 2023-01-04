@@ -10,34 +10,33 @@ const { frontmatter, url } = Astro.props.project;
 ---
 
 <div class="card">
-	<div class="titleCard" style={`background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${frontmatter.img})`}>
-		<h1 class="title">{frontmatter.title}</h1>
-	</div>
-	<div class="descCard">
-		<p class="desc">{frontmatter.description}</p>
-		<div class="tags">
-			Tagged:
-			{
-				frontmatter.tags.map((t) => (
-					<div class="tag" data-tag={t}>
-						{t}
-					</div>
-				))
-			}
+	<a href={url}>
+		<div class="titleCard" style={`background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${frontmatter.img})`}>
+			<h1 class="title">{frontmatter.title}</h1>
 		</div>
-		<a class="link" href={url}>
-			<span class="linkInner">View</span>
-		</a>
-	</div>
+		<div class="descCard">
+			<p class="desc">{frontmatter.description}</p>
+			<div class="tags">
+				Tagged:
+				{
+					frontmatter.tags.map((t) => (
+						<div class="tag" data-tag={t}>
+							{t}
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</a>
 </div>
 
 <style>
 	.card {
 		position: relative;
-		color: var(--t-bg);
-		background: var(--t-fg);
+		background: var(--t-bg);
 		border: 1px solid #f0f0f0;
 		border-radius: 1rem;
+		cursor: pointer;
 	}
 
 	.title {
@@ -61,6 +60,7 @@ const { frontmatter, url } = Astro.props.project;
 		position: relative;
 		background-size: cover;
 		background-position: 50% 100%;
+		border-radius: 1rem;
 		padding-top: 37.5%;
 	}
 
@@ -100,19 +100,6 @@ const { frontmatter, url } = Astro.props.project;
 		opacity: 1;
 	}
 
-	.link:focus,
-	.link:hover .linkInner {
-		transform: translateY(0);
-		border-color: rgba(255, 255, 255, 0.625);
-	}
-
-	.linkInner {
-		padding: 0.375em 1em;
-		border: 2px solid rgba(255, 255, 255, 0);
-		transition: transform 300ms cubic-bezier(0, 0.4, 0.6, 1), border-color 1s linear;
-		transform: translateY(25%);
-	}
-
 	.nav {
 		display: flex;
 		justify-content: flex-end;
@@ -137,7 +124,7 @@ const { frontmatter, url } = Astro.props.project;
 		color: var(--c-orange);
 	}
 	.tag:nth-of-type(3n) {
-		color: var(--c-blue);
+		color: var(--c-yellow);
 	}
 	.tag:nth-of-type(4n) {
 		color: var(--c-pink);

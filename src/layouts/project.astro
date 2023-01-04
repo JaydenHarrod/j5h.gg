@@ -90,12 +90,12 @@ const { content } = Astro.props;
 		<header style={`background-image:url(${content.img})`} class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
-		<div class="leadIn">
+		<!-- <div class="leadIn">
 			<div class="wrapper">
 				{content.tags.map((t) => <span class="tag">{t}</span>)}
 				<h3 class="tagline">{content.description}</h3>
 			</div>
-		</div>
+		</div> -->
 		<div class="wrapper">
 			<div class="content"><slot /></div>
 		</div>

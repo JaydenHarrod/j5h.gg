@@ -1,14 +1,14 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--c-black: #000000;
-	--c-blue: #00bfff;
-	--c-gray: #90aab7;
-	--c-green: #9ef2cb;
-	--c-pink: #ffb8d9;
-	--c-orange: #ffb7a3;
-	--c-yellow: #ffdace;
-	--c-white: #fff;
+	--c-black: #111111;
+	--c-blue: #ffffff;
+	--c-gray: #b5b5b5;
+	--c-green: #0ca07b;
+	--c-pink: #8559dc;
+	--c-orange: #c33522;
+	--c-yellow: #e1ee56;
+	--c-white: #f7f7f7;
 
 	/* Fonts */
 	--f-u18: 11.390625em;
@@ -48,8 +48,8 @@
 	--f-d17: 0.10049617492923625em;
 	--f-d18: 0.0877914951989026em;
 
-	--t-fg: var(--c-black);
-	--t-bg: var(--c-white);
+	--t-fg: var(--c-white);
+	--t-bg: var(--c-black);
 	--t-subdue: var(--c-gray);
 	--t-active: var(--c-blue);
 }
@@ -58,6 +58,7 @@ body {
 	margin: 0;
 	color: var(--t-fg);
 	font-family: 'niveau-grotesk', 'system-ui', sans-serif;
+	background-color: var(--c-black);
 }
 
 * {
